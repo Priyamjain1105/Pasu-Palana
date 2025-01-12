@@ -172,17 +172,10 @@ Special thanks to all the caretakers and shelters who tirelessly work to make th
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
----
-
-## 🔔 Stay Connected
-
-- 📧 Email: [support@pasupalana.org](mailto:support@pasupalana.org)
-- 🔗 Website: [www.pasupalana.org](http://www.pasupalana.org)
-- 💌 Social Media: [Follow us on Twitter](http://twitter.com/pasupalana)
 
 ---
 
-*Developed with 💖 by a team that cares.*
+*Developed with 💖 by Priyam Jain.*
 
 <div align = "center" >
     <img width = 300 src = "https://media2.giphy.com/media/wIVA0zh5pt0G5YtcAL/source.gif"/>
