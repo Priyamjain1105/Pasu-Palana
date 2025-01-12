@@ -5,8 +5,9 @@
 ---
 
 <p align="center">
-  <img src="https://media.giphy.com/media/UVqus6TxDWbfsDc4jM/giphy.gif" alt="Pasu Pālaṇā Banner">
+  <img src="https://media.giphy.com/media/UVqus6TxDWbfsDc4jM/giphy.gif" alt="Pasu Pālaṇā Banner" />
 </p>
+
 
 ## 🔗 Introduction
 
