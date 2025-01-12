@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Records Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create Animal Record</h1>
+    <form action="/submit-animal-record" method="POST">
+        <label for="name">Animal Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" required>
+
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" name="breed">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="date_added">Date Added:</label>
+        <input type="date" id="date_added" name="date_added" required>
+
+        <label for="disease_history">Disease History:</label>
+        <textarea id="disease_history" name="disease_history" rows="3"
+            placeholder="E.g., Mastitis, Foot Rot"></textarea>
+
+        <label for="treatment_history">Treatment History:</label>
+        <textarea id="treatment_history" name="treatment_history" rows="3"
+            placeholder="E.g., Antibiotics, Vaccine"></textarea>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Healthy">Healthy</option>
+            <option value="Under Treatment">Under Treatment</option>
+            <option value="Recovered">Recovered</option>
+            <option value="Deceased">Deceased</option>
+        </select>
+
+        <label for="remarks">Remarks:</label>
+        <textarea id="remarks" name="remark" rows="4" placeholder="Additional notes or observations"></textarea>
+
+        <button type="submit">Submit Record</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaushala Management - Search</title>
+    <style>
+        /* General Reset */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-bar {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 2px solid #4a90e2;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .animal-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .animal-info li {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .animal-info li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .animal-info li h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .data-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .data-row div {
+            flex: 1;
+            min-width: 220px;
+            margin-bottom: 12px;
+        }
+
+        .data-label {
+            font-weight: bold;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .data-value {
+            color: #34495e;
+            font-size: 1.2rem;
+            padding: 8px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .data-value:hover {
+            background-color: #d5dbdb;
+        }
+
+        .section-title {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Additional styles for mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .data-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .data-label {
+                font-size: 1rem;
+            }
+
+            .data-value {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Search Animal Data</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <form method="POST" action="/">
+                <input type="text" name="search" placeholder="Search by name, breed, species..." value="{{ search_query }}">
+            </form>
+        </div>
+
+        <div class="animal-info">
+            <ul>
+                {% if animals %}
+                {% for animal in animals %}
+                <li>
+                    <h3>{{ animal['name'] }} - {{ animal['species'] }}</h3>
+                    <div class="section-title">Basic Information</div>
+                    <div class="data-row">
+                        <div>
+                            <span class="data-label">Animal ID:</span>
+                            <span class="data-value">{{ animal['animal_id'] }}</span>
+                        </div>
+                        <div>
+                            <span class="data-label">Breed:</span>
+                            <span class="data-value">{{ animal['breed'] }}</span>
+                        </div>
+                        <div>
+                            <span class="data-label">Gender:</span>
+                            <span class="data-value">{{ animal['gender'] }}</span>
+                        </div>
+                    </div>
+                    <div class="data-row">
+                        <div>
+                            <span class="data-label">Date of Birth:</span>
+                            <span class="data-value">{{ animal['dob'] }}</span>
+                        </div>
+                        <div>
+                            <span class="data-label">Date Added:</span>
+                            <span class="data-value">{{ animal['date_added'] }}</span>
+                        </div>
+                    </div>
+
+                    <div class="section-title">Health Information</div>
+                    <div class="data-row">
+                        <div>
+                            <span class="data-label">Disease History:</span>
+                            <span class="data-value">{{ animal['disease_history'] }}</span>
+                        </div>
+                        <div>
+                            <span class="data-label">Treatment History:</span>
+                            <span class="data-value">{{ animal['treatement_history'] }}</span>
+                        </div>
+                    </div>
+
+                    <div class="section-title">Status</div>
+                    <div class="data-row">
+                        <div>
+                            <span class="data-label">Status:</span>
+                            <span class="data-value">{{ animal['status'] }}</span>
+                        </div>
+                        <div>
+                            <span class="data-label">Remark:</span>
+                            <span class="data-value">{{ animal['remark'] }}</span>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <p>No results found for your search.</p>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

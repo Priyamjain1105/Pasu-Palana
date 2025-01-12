@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पशु पालणा</title>
+    <style>
+        /* General Reset */
+        body,
+        h1,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #3498db;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Main Section */
+        .main-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .main-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .main-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-container {
+            margin-top: 40px;
+        }
+
+        .btn-container a {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-container a:hover {
+            background-color: #2980b9;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .main-section h2 {
+                font-size: 2rem;
+            }
+
+            .btn-container a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/">Add New Record</a>
+        <a href="{{ url_for('data') }}">View Records</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="fade-in">Welcome to पशु पालणा</h1>
+        <p class="fade-in">Manage Animal Records with Ease and Efficiency</p>
+    </header>
+
+    <!-- Main Section -->
+    <div class="main-section fade-in">
+        <h2>Efficient Animal Management System</h2>
+        <p>Track and manage health, breed, and other important data of the animals in your care. Our system makes animal
+            record keeping easier and more reliable.</p>
+
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/image.png') }}"" alt=" Animal Image">
+        </div>
+
+        <div class="btn-container">
+            <a href="/">Add New Animal Record</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 पशु पालणा. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

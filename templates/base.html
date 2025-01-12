@@ -1,0 +1,121 @@
+html<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पशु पालणा - Animal Records</title>
+    <style>
+        /* General Body and Background */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #2f3b52;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #3b4a65;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px 20px;
+            text-decoration: none;
+            margin: 0 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+
+        /* Footer Section */
+        footer {
+            background-color: #2f3b52;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>पशु पालणा</h1>
+        <p>Welcome to the Animal Care Management System</p>
+    </header>
+
+    <!-- Navbar Section -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="{{ url_for('data') }}">View Animals</a> <!-- Link to the 'new.html' route -->
+        <a href="{{ url_for('/') }}">Add Animal</a>
+    </nav>
+
+
+    <main>
+        {% block content %}
+        <!-- Default content goes here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 पशु पालणा. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

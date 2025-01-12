@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पशु पालणा - Animal Records</title>
+    <style>
+        /* General Body and Background */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #2f3b52;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #3b4a65;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px 20px;
+            text-decoration: none;
+            margin: 0 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+        /* Main Form Section */
+        .form-container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input Fields */
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f8f8f8;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #2f3b52;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>पशु पालणा</h1>
+        <p>Welcome to the Animal Care Management System</p>
+    </header>
+
+    <!-- Navbar Section -->
+    <nav>
+        <a href="{{ url_for('view') }}">Home</a>
+        <a href="{{ url_for('data') }}">View Animals</a> <!-- Link to the 'new.html' route -->
+        <a href="/">Add Animal</a>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h2>Create Animal Record</h2>
+        <form action="/submit-animal-record" method="POST">
+            <label for="name">Animal Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="species">Species:</label>
+            <input type="text" id="species" name="species" required>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="date_added">Date Added:</label>
+            <input type="date" id="date_added" name="date_added" required>
+
+            <label for="disease_history">Disease History:</label>
+            <textarea id="disease_history" name="disease_history" rows="3"
+                placeholder="E.g., Mastitis, Foot Rot"></textarea>
+
+            <label for="treatment_history">Treatment History:</label>
+            <textarea id="treatment_history" name="treatment_history" rows="3"
+                placeholder="E.g., Antibiotics, Vaccine"></textarea>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Healthy">Healthy</option>
+                <option value="Under Treatment">Under Treatment</option>
+                <option value="Recovered">Recovered</option>
+                <option value="Deceased">Deceased</option>
+            </select>
+
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" name="remark" rows="4" placeholder="Additional notes or observations"></textarea>
+
+            <button type="submit">Submit Record</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 पशु पालणा. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
