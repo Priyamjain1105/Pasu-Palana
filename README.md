@@ -4,9 +4,9 @@
 
 ---
 
-<p align="center">
+<div align="center">
   <img src="https://media.giphy.com/media/UVqus6TxDWbfsDc4jM/giphy.gif" alt="Pasu Pālaṇā Banner" />
-</p>
+</div>
 
 
 ## 🔗 Introduction
