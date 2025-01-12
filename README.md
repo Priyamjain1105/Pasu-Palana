@@ -4,7 +4,9 @@
 
 ---
 
-![Animal Care Banner](https://via.placeholder.com/800x200.png?text=Compassionate+Animal+Care)
+<p align="center">
+  <img src="https://media.giphy.com/media/UVqus6TxDWbfsDc4jM/giphy.gif" alt="Pasu Pālaṇā Banner">
+</p>
 
 ## 🔗 Introduction
 
