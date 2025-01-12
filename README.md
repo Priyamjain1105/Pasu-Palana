@@ -74,13 +74,17 @@ Pasu-Palana/
 Add the following images in the `static/images/` folder to illustrate the project:
 
 1. **Front Page**:
-   ![Front Page Screenshot](static/images/front_page.png)
+   ![Front Page Screenshot](https://github.com/user-attachments/assets/48c3961b-26cd-4b46-8d98-87d88d1ee003)
+
 2. **Form Page** (Animal Data Entry):
-   ![Form Page Screenshot](static/images/form_page.png)
+   ![image](https://github.com/user-attachments/assets/7de9efcf-e66b-455b-8b79-dc008e4b21e9)
+
 3. **View Records Page**:
-   ![View Records Screenshot](static/images/view_records.png)
+   ![image](https://github.com/user-attachments/assets/6696fbb4-1f2e-49c3-b5ab-95c2a5e35249)
+
 4. **Database View** (MySQL data storage):
-   ![Database Screenshot](static/images/database_view.png)
+   ![image](https://github.com/user-attachments/assets/d55d5e49-0a4b-4955-ad1e-25ff57d0bba1)
+
 
 ### Video Demo
 - Include a video walkthrough of the project:
