@@ -181,7 +181,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 *Developed with 💖 by a team that cares.*
 
 <div align = "center" width = 500>
-    <img width = 500 src = "https://media2.giphy.com/media/wIVA0zh5pt0G5YtcAL/source.gif"/>
+    <img width = 300 src = "https://media2.giphy.com/media/wIVA0zh5pt0G5YtcAL/source.gif"/>
 </div>
 
 
