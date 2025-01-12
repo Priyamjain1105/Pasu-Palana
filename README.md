@@ -2,12 +2,12 @@
 
 ❤️ *Compassionate care through innovative technology*
 
----
 
 <div align="center">
-  <img src="https://media.giphy.com/media/UVqus6TxDWbfsDc4jM/giphy.gif" alt="Pasu Pālaṇā Banner" />
+  <img src="https://media.giphy.com/media/LlK6rTQ1nvOs8Gfp8k/giphy.gif" alt="Pasu Pālaṇā Banner" />
 </div>
 
+---
 
 ## 🔗 Introduction
 
