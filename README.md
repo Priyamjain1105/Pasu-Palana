@@ -87,8 +87,8 @@ Add the following images in the `static/images/` folder to illustrate the projec
 
 
 ### Video Demo
-- Include a video walkthrough of the project:
-  [Project Demo Video](https://example.com/demo-video)
+- ![Untitled design (1)](https://github.com/user-attachments/assets/64e4a232-c12e-4de0-b244-83982197ee20)
+
 
 ---
 
